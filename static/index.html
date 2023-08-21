@@ -5,13 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chat</title>
     <script src="https://cdn.jsdelivr.net/npm/stream-chat@latest"></script> <!-- Biblioteca de Stream Chat -->
+    <style>
+        #conversation {
+            display: none;
+        }
+    </style>
 </head>
 <body>
     <h1 id="user-title"></h1>
-    <h2>Listado de clientes</h2>
-    <div id="users-list"></div>
+    <div id="chat-section">
+        <h2>Listado de clientes</h2>
+        <div id="users-list"></div>
+    </div>
+    <div id="conversation">
+        <div id="conversation-title"></div>
+        <div id="messages-list">No hay mensajes</div>
+        <input id="message-input" type="text" placeholder="Escribe un mensaje...">
+        <button onclick="sendMessage()">Enviar</button>
+    </div>
     <script src="static/script.js"></script>
 </body>
 </html>
-
-
